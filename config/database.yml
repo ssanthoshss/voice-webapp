@@ -1,0 +1,26 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  collation: utf8mb4_bin
+  reconnect: false
+  pool: 50
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+  socket: <%= ENV['DATABASE_SOCKET'] %>
+  variables:
+    sql_mode: ""
+development:
+  <<: *default
+  database: "hellonext"
+test:
+  <<: *default
+  database: "hellonext_test"
+production:
+  <<: *default
+  database: <%= ENV['DATABASE_PROD_NAME'] %>
+  username: <%= ENV['DATABASE_PROD_USERNAME'] %>
+  password: <%= ENV['DATABASE_PROD_PASSWORD'] %>
+  port: <%= ENV['DATABASE_PROD_PORT'] %>
+  host: <%= ENV['DATABASE_PROD_HOST'] %>
+  socket: <%= ENV['DATABASE_PROD_SOCKET'] %>
