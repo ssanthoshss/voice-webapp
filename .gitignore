@@ -10,14 +10,50 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
+sitemap.xml
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+hn_backup.sql
+config/database.yml
+config/secrets.yml
 
 /node_modules
 /yarn-error.log
 
 .byebug_history
+
+passenger.3000.pid
+passenger.3000.pid.lock
+passenger.3001.pid.lock
+passenger.3001.pid
+
+evolvrX_development
+evolvrX_test
+
+dump.rdb
+
+public/assets/*
+public/uploads/*
+yarn.lock
+
+# Ignore .DS_store file
+.DS_Store
+
+
+# Ignore cache
+/.sass-cache
+/.cache
+
+# Gemfile lock
+Gemfile.lock
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+coverage
