@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'firebase-ruby'
 gem 'firebase', '~> 0.2.6'
+
+gem 'rack-cors', :require => 'rack/cors'
